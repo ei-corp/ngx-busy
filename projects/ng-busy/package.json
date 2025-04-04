@@ -1,12 +1,12 @@
 {
-  "name": "ng-busy",
+  "name": "ngx-busy",
   "version": "18.0.0",
   "description": "Show busy/loading indicators on any promise or subscription",
   "author": "victos",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/victos/angular-opensource.git"
+    "url": "git+https://github.com/ei-corp/ngx-busy.git"
   },
   "homepage": "https://github.com/victos/angular-opensource/tree/master/projects/ng-busy",
   "bugs": {
@@ -24,6 +24,12 @@
     "angular5",
     "angular6"
   ],
+  "scripts": {
+    "prebuild": "rimraf ./dist/ng-busy",
+    "build": "ng build --configuration production",
+    "postbuild": "lessc ./src/lib/style/busy.less ./dist/ng-busy/src/style/busy.css",
+    "publish": "npm run build && npm publish ./dist/ng-busy"
+  },
   "engines": {
     "node": ">= 18.19.0",
     "npm": ">= 10.2.3"

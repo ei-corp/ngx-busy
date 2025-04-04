@@ -3,11 +3,16 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "transpile": "ngc",
     "start": "ng build ng-busy && ng serve",
     "prebuild": "rimraf ./dist/ng-busy",
     "build": "ng build ng-busy --configuration production",
     "postbuild": "lessc ./projects/ng-busy/src/lib/style/busy.less ./dist/ng-busy/src/style/busy.css",
-    "publish": "npm run build && npm publish ./dist/ng-busy"
+    "publish": "npm run build && npm publish ./dist/ng-busy",
+
+    "minify": "uglifyjs dist/ng-busy/ng-busy.umd.js --compress --mangle --comments --output dist/ng-busy/ng-busy.umd.min.js",
+    "build-new": "npm run transpile && npm run package && npm run minify",
+    "pack": "rimraf -g ./*.tgz && npm pack ./dist"
   },
   "dependencies": {
     "@angular/animations": "^18.0.4",
@@ -49,6 +54,7 @@
     "rimraf": "^5.0.1",
     "ts-node": "~9.0.0",
     "tslint": "~6.1.3",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "uglifyjs": "2.4.11"
   }
 }
