@@ -50,3 +50,4 @@ yarn.lock
 yarn-error.log
 .vim/*
 pnpm-lock.yaml
+/projects/ng-busy/.idea/workspace.xml
