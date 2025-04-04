@@ -36,14 +36,15 @@ const createSubscriptionWithDelay = (delay: number): Subscription => {
 
 // @ts-ignore
 @Component({
-  selector: 'lib-component-template',
-  template: `
+    selector: 'lib-component-template',
+    template: `
       <div>
           <div>
               {{message}}
           </div>
       </div>
   `,
+    standalone: false
 })
 export class CustomBusyComponent {
 
@@ -56,11 +57,12 @@ export class CustomBusyComponent {
 }
 
 @Component({
-  template: `
+    template: `
       <ng-template #customTemplate>
           <div class="custom_template_for_test" style="margin-top: 110px; text-align: center;">Hi, This is from ng-template.</div>
       </ng-template>
-      <div class="ng-busy-container-for-test" [ngBusy]="options"></div>`
+      <div class="ng-busy-container-for-test" [ngBusy]="options"></div>`,
+    standalone: false
 })
 class TestNgBusyComponent {
   options: any;
@@ -69,9 +71,10 @@ class TestNgBusyComponent {
 }
 
 @Component({
-  template: `
+    template: `
       <div class="ng-busy-container-for-test" [ngBusy]="options"></div>`,
-  changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 class TestNgBusyOnPushComponent {
   options: any;

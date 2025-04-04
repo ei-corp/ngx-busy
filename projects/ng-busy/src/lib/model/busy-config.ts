@@ -20,8 +20,8 @@ export class BusyConfig implements IBusyConfig {
 }
 
 @Component({
-  selector: 'default-busy',
-  template: `
+    selector: 'default-busy',
+    template: `
       <div class="ng-busy-default-wrapper">
           <div class="ng-busy-default-sign">
               <div class="ng-busy-default-spinner">
@@ -42,6 +42,7 @@ export class BusyConfig implements IBusyConfig {
           </div>
       </div>
   `,
+    standalone: false
 })
 export class DefaultBusyComponent {
 

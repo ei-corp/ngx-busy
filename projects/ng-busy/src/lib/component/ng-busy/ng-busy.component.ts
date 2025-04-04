@@ -10,20 +10,21 @@ const inactiveStyle = style({
 const timing = '.3s ease';
 
 @Component({
-  selector: 'lib-ng-busy',
-  templateUrl: './ng-busy.component.html',
-  styleUrls: ['./ng-busy.component.css'],
-  animations: [
-    trigger('flyInOut', [
-      transition('void => *', [
-        inactiveStyle,
-        animate(timing)
-      ]),
-      transition('* => void', [
-        animate(timing, inactiveStyle)
-      ])
-    ])
-  ]
+    selector: 'lib-ng-busy',
+    templateUrl: './ng-busy.component.html',
+    styleUrls: ['./ng-busy.component.css'],
+    animations: [
+        trigger('flyInOut', [
+            transition('void => *', [
+                inactiveStyle,
+                animate(timing)
+            ]),
+            transition('* => void', [
+                animate(timing, inactiveStyle)
+            ])
+        ])
+    ],
+    standalone: false
 })
 export class NgBusyComponent implements OnDestroy {
 

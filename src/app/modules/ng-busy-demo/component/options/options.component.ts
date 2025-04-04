@@ -11,9 +11,10 @@ import { TemplateService } from '../../service/template.service';
 
 
 @Component({
-  selector: 'demo-options',
-  templateUrl: './options.component.html',
-  styleUrls: ['./options.component.css']
+    selector: 'demo-options',
+    templateUrl: './options.component.html',
+    styleUrls: ['./options.component.css'],
+    standalone: false
 })
 export class OptionsComponent {
   templateNgStyle = '{"background-color":"black", "color": "red"}';

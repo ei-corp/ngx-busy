@@ -3,10 +3,11 @@ import {IBusyConfig} from 'ng-busy';
 import {TemplateService} from '../../service/template.service';
 
 @Component({
-  selector: 'app-code-viewer',
-  templateUrl: './code-viewer.component.html',
-  styleUrls: ['./code-viewer.component.css'],
-  providers: [{provide: 'Window', useValue: window}]
+    selector: 'app-code-viewer',
+    templateUrl: './code-viewer.component.html',
+    styleUrls: ['./code-viewer.component.css'],
+    providers: [{ provide: 'Window', useValue: window }],
+    standalone: false
 })
 export class CodeViewerComponent implements OnChanges {
 
