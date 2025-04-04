@@ -1,5 +1,5 @@
 {
-  "name": "ngx-busy",
+  "name": "@ei/ngx-busy",
   "version": "19.0.0",
   "description": "Show busy/loading indicators on any promise or subscription",
   "author": "victos",
