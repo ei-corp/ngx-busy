@@ -26,8 +26,8 @@ const createPromiseWithDelay = (delay: number): Promise<void> => {
 
 const createSubscriptionWithDelay = (delay: number): Subscription => {
   return new Observable((o) => {
-    setTimeout(() => {
-      o.next();
+    setTimeout((t: number = 0) => {
+      o.next(t);
       o.complete();
     }, delay);
   }).subscribe(() => {
