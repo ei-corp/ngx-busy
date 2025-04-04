@@ -35,9 +35,9 @@
     "npm": ">= 10.7.0"
   },
   "peerDependencies": {
-    "@angular/common": "^18.0.0",
-    "@angular/core": "^18.0.0",
-    "@angular/animations": "^18.0.0",
+    "@angular/common": "^19.2.5",
+    "@angular/core": "^19.2.5",
+    "@angular/animations": "^19.2.5",
     "rxjs": "^7.8.2"
   },
   "dependencies": {
