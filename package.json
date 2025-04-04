@@ -10,7 +10,7 @@
     "postbuild": "lessc ./projects/ng-busy/src/lib/style/busy.less ./dist/ng-busy/src/style/busy.css",
     "publish": "npm run build && npm publish ./dist/ng-busy",
     "minify": "uglifyjs dist/ng-busy/ng-busy.umd.js --compress --mangle --comments --output dist/ng-busy/ng-busy.umd.min.js",
-    "build-new": "npm run transpile && npm run package && npm run minify",
+    "build-new": "npm run package && npm run minify",
     "pack": "rimraf -g ./*.tgz && npm pack ./dist"
   },
   "dependencies": {
