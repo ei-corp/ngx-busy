@@ -38,7 +38,7 @@ describe('NgBusyComponent', () => {
     fixture = TestBed.createComponent(NgBusyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-    busyEmitter = TestBed.get('busyEmitter');
+    busyEmitter = TestBed.inject('busyEmitter');
   });
 
   it('should create', () => {
