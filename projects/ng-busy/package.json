@@ -1,6 +1,6 @@
 {
   "name": "@ei/ngx-busy",
-  "version": "19.0.0",
+  "version": "20.0.0",
   "description": "Show busy/loading indicators on any promise or subscription",
   "author": "victos",
   "license": "MIT",
@@ -31,13 +31,13 @@
     "publish": "npm run build && npm publish ./dist/ng-busy"
   },
   "engines": {
-    "node": ">= 20.10.0",
+    "node": ">= 20.19.0",
     "npm": ">= 10.7.0"
   },
   "peerDependencies": {
-    "@angular/common": "^19.2.5",
-    "@angular/core": "^19.2.5",
-    "@angular/animations": "^19.2.5",
+    "@angular/common": "^20.1.4",
+    "@angular/core": "^20.1.4",
+    "@angular/animations": "^20.1.4",
     "rxjs": "^7.8.2"
   },
   "dependencies": {
